@@ -1,0 +1,17 @@
+select *From tblProducts;
+select *from tblProducts where Price >=10 and Price<12;
+select *from tblProducts where Price between 8 and 15;
+select *from tblProducts where [Name]='Tea';
+select *from tblProducts where [Name] in ('Tea', 'coffee');
+select *from tblProducts where [Name] like '%a%';
+select [Name], [Price]*Quantity as 'Total Price' from tblProducts;
+select count(*) as 'Number of Product' from tblProducts;
+select sum([Price]*Quantity) as 'Total price' from tblProducts;
+select avg([Price]) as 'Total price' from tblProducts;
+select min([Price]) as 'Total price' from tblProducts;
+select max([Price]) as 'Total price' from tblProducts;
+Select *from tblProducts order by [Name];
+Select *from tblProducts order by [Name] desc;
+Select *from tblProducts order by [DateIn];
+delete from tblProducts where [Name]='Tea';
+select *from tblProducts where MONTH([DateIn])=05;
